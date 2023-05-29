@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #image-container {
+        width: 400px;
+        height: 300px;
+      }
+
+      #image {
+        width: 100%;
+        height: 100%;
+      }
+
+      #button-container {
+        margin-top: 10px;
+      }
+
+      button {
+        padding: 5px 10px;
+        margin-right: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="image-container">
+      <img id="image" src="img_1.png" alt="Default Image" />
+    </div>
+
+    <div id="button-container">
+      <button onclick="changeImage('img_1.png')">Button 1</button>
+      <button onclick="changeImage('img_3.png')">Button 2</button>
+      <button onclick="changeImage('img_4.png')">Button 3</button>
+    </div>
+  </body>
+  <script>
+    function changeImage(imagePath) {
+      var image = document.getElementById("image");
+      image.src = imagePath;
+    }
+  </script>
+</html>
